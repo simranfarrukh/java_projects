@@ -1,0 +1,46 @@
+package com.farrukhsimran.staticKeyword;
+
+public class Employee {
+	private String name, jobTitle;
+	private double hourlyWage;
+	private static double minimumWage;
+	
+	//getter & setter for jobTitle
+	public String getJobTitle() {
+		return jobTitle;
+	}
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	
+	//getter & setter for name
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	//getter & setter for hourlyWage
+	public double getHourlyWage() {
+		return hourlyWage;
+	}
+	public double setHourlyWage(double hourlyWage) {
+		if (hourlyWage < minimumWage) {
+			this.hourlyWage = minimumWage;
+		} else {
+			this.hourlyWage = hourlyWage;
+		}
+		return hourlyWage;
+	}
+	
+	//getter & setter for minimumWage
+	public static double getMinimumWage() {
+		return minimumWage;
+	}
+	public static void setMinimumWage(double minimumWage) {
+		Employee.minimumWage = minimumWage;
+	}
+	
+	
+}
