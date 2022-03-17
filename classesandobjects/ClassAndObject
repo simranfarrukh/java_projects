@@ -1,0 +1,25 @@
+package com.farrukh.simran.classesandobjects;
+
+public class ClassAndObject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+	}
+
+
+	
+	
+	public static boolean arrayContains(String[] array, String string) {
+		
+		for (String element : array) {
+			if (element.equals(string)) {
+				return true;
+			}
+		}
+			return false;
+		}
+
+
+}
