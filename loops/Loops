@@ -1,0 +1,184 @@
+package com.farrukh.simran.loops;
+
+import java.util.ArrayList;
+
+public class Loops {
+
+	public static void main(String[] args) {
+		//1.1
+		String[] courses = {"UNIX", "SQL", "Java", "Python", "Web Apps"};
+		
+		for (String course : courses){
+			System.out.println("I love learning " + course);
+		}
+		
+		//1.2
+		ArrayList<String> courseList = new ArrayList<String>();
+		
+		for (String course : courses){
+			courseList.add(course);
+		}
+
+		//1.3
+		for (String course : courseList){
+			System.out.println(course);
+		}
+
+		//1.4
+		ArrayList<Double> prices = new ArrayList<Double>();
+		
+		prices.add(4.50);
+		prices.add(1.99);
+		prices.add(9.75);
+		prices.add(3.15);
+		prices.add(10.25);
+						
+		double totalt = 0.0;
+						
+		for (double price : prices){
+			totalt += price;
+		}
+						
+		System.out.println(totalt);
+
+		//1.5
+		double[] priceArray = new double[5];
+		
+		int index = 0;
+						
+		for (double price : prices){
+			priceArray[index] = price;
+			index ++;
+		}
+		
+		//1.6
+		String string = "10,7,25,3,8";
+		
+		String[] numbers = string.split(",");
+						
+		int total1 = 0;
+						
+		for (String number : numbers){
+			total1 += Integer.parseInt(number);
+		}
+		System.out.println(total1);
+
+		//1.7
+		String string1 = "desrever neeb sah txet siht";
+		
+		char[] letters = string1.toCharArray();
+				
+		String reversed = "";
+				
+		for (char letter : letters){
+			reversed = letter + reversed;
+		}
+				
+		System.out.println(reversed);
+		
+		//2.1
+		for (int x = 1; x <= 1000000; x++){
+			System.out.println(x);
+		}
+
+		//2.2
+		long total = 0;
+		
+		for (int x = 1; x <= 1000000; x++){
+			total += x;
+		}
+						
+		System.out.println(total);
+		
+		//2.3
+		for (int x = 1; x <= 20; x+=2){
+			System.out.println(x);
+		}
+
+		//2.4
+		for (int x = 1; x<= 12; x++){
+			System.out.println(x + " x 3 = " + (x*3));
+		}
+
+		//2.5
+		int[] scores = {25,15,99,75,47,59,82};
+		
+		for (int index1 = 1; index1 < scores.length; index1 +=2){
+			scores[index1] ++;
+		}
+						
+		for (int index1 = 0; index1 < scores.length; index1 ++){
+			System.out.println(scores[index1]);
+		}
+		
+		//2.6
+		for (char letter = 'b'; letter <= 'z'; letter +=2){
+			System.out.println(letter);
+		}
+
+		//2.7
+		for (int table = 2; table <=12; table++){
+			System.out.println(table+" times table");
+							
+			for (int multiple = 1; multiple <=12; multiple++){
+				int result = multiple * table;
+				System.out.println(multiple+" x "+table+" = "+result);
+			}
+							
+			System.out.println();
+		}
+
+		
+		//3.1
+		int count = 1;
+		
+		while (count <= 1000000){
+			System.out.println(count);
+			count ++;
+		}
+
+		//3.2
+		char letter = 'a';
+		
+		while (letter <= 'z'){
+			System.out.println(letter);
+			letter++;
+		}
+
+		//3.3
+		int previousNumber = 1;
+		int currentNumber = 0;
+						
+		while(currentNumber <= 1000){
+			System.out.println(currentNumber);
+			int temp = currentNumber;
+			currentNumber += previousNumber;
+			previousNumber = temp;
+		}
+
+		//4.1
+		String[] cities = { "Glasgow", "London", "Birmingham", "Cardiff", "Manchester", "Newcastle" };
+
+		for (String city : cities) {
+			if (city.charAt(0) == 'B') {
+				System.out.println(city + " -  match");
+				break;
+			} else {
+				System.out.println(city + " - doesn't match");
+			}
+		}
+
+		//4.2
+		int[] numbers1 = {6, 15, 75, 32, 89, 24, 103, 17, 5, 250, 63, 91};
+
+		for (int number : numbers1){
+			if (number > 100){
+				System.out.println(number);
+				break;
+			}
+		}
+
+
+	}
+
+}
