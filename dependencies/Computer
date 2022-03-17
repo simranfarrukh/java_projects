@@ -1,0 +1,71 @@
+package com.farrukhsimran.dependencies;
+
+public class Computer {
+
+	private HardDrive hardDrive;
+	private String MODEL;
+	private Memory memory;
+	private Processor PROCESSOR;
+
+	
+	//Constructor
+	Computer(String model, HardDrive hardDrive, Memory memory, Processor processor){
+		this.setMODEL(model);
+		this.setHardDrive(hardDrive);
+		this.setMemory(memory);
+		this.setPROCESSOR(processor);
+		}
+	
+	
+	//Void method
+	void turnOn() {
+		System.out.println(" Turns on ");
+		}
+	
+	void turnOff() {
+		System.out.println(" Turns off ");
+		}
+
+	//getter and setter for HardDrive
+	public HardDrive getHardDrive() {
+		return hardDrive;
+	}
+	public void setHardDrive(HardDrive hardDrive) {
+		this.hardDrive = hardDrive;
+	}
+
+	//getter and setter for Model
+	public String getMODEL() {
+		return MODEL;
+	}
+	public void setMODEL(String mODEL) {
+		MODEL = mODEL;
+	}
+	
+	//getter and setter for Memory
+	public Memory getMemory() {
+		return memory;
+	}
+	public void setMemory(Memory memory) {
+		this.memory = memory;
+	}
+
+	//getter and setter for Processor
+	public Processor getPROCESSOR() {
+		return PROCESSOR;
+	}
+	public void setPROCESSOR(Processor pROCESSOR) {
+		PROCESSOR = pROCESSOR;
+	}	
+	
+	//getter and setter for PowerSource
+	public void getPower(PowerSource powerSource) {
+		System.out.println("Watts: " + powerSource.supplyPower());
+	}
+
+	//toString
+		@Override
+		public String toString() {
+			return "Computer [MODEL=" + MODEL + ", HARD DRIVE=" + hardDrive + ", MEMORY=" + memory + ", PROCESSOR=" + PROCESSOR + "]";
+			}
+}
