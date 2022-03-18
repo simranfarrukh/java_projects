@@ -1,0 +1,39 @@
+package com.farrukhsimran.inheritance;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		AdminUser admin1 = new AdminUser("simran_farrukh", "simple", "Simran Farrukh");
+		AdminUser admin2 = new AdminUser("dunyazatde", "Plok@1205", "Dunyazatde");
+		System.out.println(admin1);
+		System.out.println(admin2);
+		
+		
+		Customer cust1 = new Customer("Nishant", "Java090", "Nishant Agarwal");
+		Customer cust2 = new Customer("Mayank", "", "Mayank Arora");
+		System.out.println(cust1);
+		System.out.println(cust2);
+		
+
+		System.out.println(admin1.changePassword("!QAZSE4", "!QAZSE4"));
+		System.out.println(admin1);
+
+		admin1.changePassword("Golden@01", "!QAZSE4");
+		System.out.println(admin1);
+
+		admin2.accessWebsite();
+		cust2.accessWebsite();
+		
+		UserAccountManager user = new UserAccountManager();
+		user.addUser(cust1);
+		user.addUser(cust2);
+		user.addUser(admin1);
+		user.addUser(admin2);
+		
+		
+		
+		System.out.println(user.login("Nishant", "Java090"));
+		System.out.println(user.login("dunyazatde", ""));
+	}
+
+}
