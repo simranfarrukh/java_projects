@@ -1,0 +1,46 @@
+package com.farrukh.simran.inheritance;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Toy toy1 = new Toy("car", 9.22, 2, 25);
+		Laptop laptop1 = new Laptop("HP", 900, 25.0, 16.0, 720.0);
+		Snack snack1 = new Snack("chicken salad", 3.49, 33, 22, 250);
+		Snack snack2 = new Snack("egg potato salad", 3.49, 33, 22, 550);
+		
+		
+		ReadyMeal meal1 = new ReadyMeal("Dinner",12.49, "Indian", 430);
+		ReadyMeal meal2 = new ReadyMeal("Lunch", 15.99, "Korean", 540);
+
+		meal1.setCalories(502);
+		meal2.setCalories(498);
+	
+		Basket basket1 = new Basket();
+		CalorieCounter cc1 = new CalorieCounter();
+		
+		basket1.addItem(toy1);
+		basket1.addItem(laptop1);
+		basket1.addItem(snack1);
+		basket1.addItem(snack2);
+		basket1.addItem(meal1);
+		basket1.addItem(meal2);
+		
+		System.out.println("gets all basketitems after adding 5 items");
+		basket1.getAllItems();
+		
+		basket1.removeItem(snack1);
+		
+		System.out.println("gets all basket items after removing 1 item");
+		basket1.getAllItems();
+
+		cc1.addItem(snack1);
+		cc1.addItem(snack2);
+		cc1.addItem(meal1);
+		cc1.addItem(meal2);
+		
+	//	cc1.addItem(toy1);
+		System.out.println("gets all low calorie food items < or = 500 calories");
+		cc1.getAllItems();
+	}
+
+}
