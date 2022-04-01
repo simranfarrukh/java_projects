@@ -1,0 +1,72 @@
+package com.fdmgroup.tdd.taxcalculator;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class ScottishTaxCalculatorTest {
+
+	private ScottishTaxCalculator taxcal;
+	
+	@BeforeEach
+	void init() {
+		taxcal = new ScottishTaxCalculator();
+		System.out.println("Before Each test a new ScottishTaxCalculator is created");
+	}
+	
+	@Test 
+	void test_lessthanorequalto11500() {
+		double income = 11400;
+		double expectedValue = 0.0;
+		double actualValue = taxcal.getTaxRate(income);
+		
+		assertEquals(expectedValue, actualValue, 0.1);
+	}
+	
+	@Test 
+	void test_lessthanorequalto11851butgreaterthanorequalto13850() {
+		double income = 13849;
+		double expectedValue = 19.0;
+		double actualValue = taxcal.getTaxRate(income);
+		
+		assertEquals(expectedValue, actualValue, 0.1);
+	}
+	
+	@Test 
+	void test_lessthanorequalto13851butgreaterthanorequalto24000() {
+		double income = 23000;
+		double expectedValue = 20.0;
+		double actualValue = taxcal.getTaxRate(income);
+		
+		assertEquals(expectedValue, actualValue, 0.1);
+	}
+	
+	@Test 
+	void test_lessthanorequalto24001butgreaterthanorequalto44273() {
+		double income = 43000;
+		double expectedValue = 21.0;
+		double actualValue = taxcal.getTaxRate(income);
+		
+		assertEquals(expectedValue, actualValue, 0.1);
+	}
+	
+	@Test 
+	void test_lessthanorequalto44274butgreaterthanorequalto150000() {
+		double income = 100000;
+		double expectedValue = 41.0;
+		double actualValue = taxcal.getTaxRate(income);
+		
+		assertEquals(expectedValue, actualValue, 0.1);
+	}
+	
+	@Test 
+	void test_greaterthanorequalto150000() {
+		double income = 160000;
+		double expectedValue = 46.0;
+		double actualValue = taxcal.getTaxRate(income);
+		
+		assertEquals(expectedValue, actualValue, 0.1);
+	}
+}
+
