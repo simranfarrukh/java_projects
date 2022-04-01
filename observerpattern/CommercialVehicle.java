@@ -1,4 +1,4 @@
-package com.fdmgroup.observer;
+package com.farrukh.simran.oberverpattern;
 
 public class CommercialVehicle implements TrafficLightObserver{
 
