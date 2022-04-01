@@ -1,4 +1,4 @@
-package com.fdmgroup.tdd.taxcalculator;
+package com.farrukh.simran.tdd.taxcalculator;
 
 public interface TaxCalculationService {
 
